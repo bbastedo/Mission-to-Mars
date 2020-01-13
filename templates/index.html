@@ -23,12 +23,7 @@
             <h2>Latest Mars News </h2>
             <h4>{{ mission_mars.News_Title}}</h4>
             <h5>{{ mission_mars.Paragraph_Text }}</h5>
-
-
         </div>
-
-
-
         <section class="container-fluid px-5 py-5">
             <div class="row">
                 <div class="col-sm-9 mx-sm-auto">
@@ -43,7 +38,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-3">
                     <div class="card mb-4">
                         <h5 class="card-header bg-transparent ">Current Weather on Mars</h5>
@@ -55,17 +49,12 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="mt-5">
                         <h5>Mars Facts </h5>{{ mission_mars.Mars_Table | safe }}
                     </div>
                 </div>
-
             </div>
         </section>
-
-
         <section class="container-fluid px-5 py-5">
             <div class="row">
 
@@ -75,10 +64,7 @@
 
                             <h2 class="card-title text-center">Mars Hemispheres</h2>
                         </div>
-
                         <div class="card-body container">
-
-
                             <div class="row text-center">
                                 {% for img in mission_mars.Mars_Hemispheres %}
                                 <div class="col-md-6 p-5 text-decoration-none">

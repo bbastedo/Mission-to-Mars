@@ -37,7 +37,7 @@ def scrape_info():
 
     # Scrape page into Soup
     html = browser.html
-    soup = bs(html, 'lxml')
+    bsoup = bs(html, 'lxml')
 
     # Get featured image
     image_name= bsoup.find('article', class_='carousel_item')['alt'] 
@@ -55,8 +55,8 @@ def scrape_info():
     bsoup = bs(html, 'lxml')
 
     #Get Mars Weather
-    mars_weather= bsoup.find('p', class_='css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0')
-
+    tweet_container = bsoup.body.find('div','js-tweet-text-container')
+    mars_weather = tweet_container.find('p').text
     
      #Visit Mars facts url
     facts_url = 'https://space-facts.com/mars/'
